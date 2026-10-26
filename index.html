@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夜间补光灯｜第二台手机就是补光灯，全屏常亮随手调</title>
+<meta name="description" content="手边没灯时，第二台手机就是补光灯：全屏常亮，颜色和强度随手调，两台手机不用配对、也不能远程控制。0 权限，数据只存本机。">
+<style>
+  :root{
+    --bg:#f6f8f7; --surface:#ffffff; --ink:#0f1a17; --muted:#5b6b66;
+    --brand:#0f766e; --brand-soft:#ccfbf1; --line:#e4ebe8; --radius:20px;
+    --shadow:0 1px 2px rgba(16,40,36,.04),0 12px 32px rgba(16,40,36,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header.nav{position:sticky;top:0;z-index:20;background:rgba(246,248,247,.82);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
+  .dot{width:22px;height:22px;border-radius:7px;background:linear-gradient(135deg,var(--brand),#14b8a6)}
+  .nav-cta{font-size:14px;color:#fff;background:var(--brand);padding:9px 16px;border-radius:999px;text-decoration:none;font-weight:600}
+  .hero{padding:72px 0 40px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--brand);background:var(--brand-soft);padding:6px 12px;border-radius:999px;font-weight:600}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.15;margin:18px 0 14px;letter-spacing:-.5px}
+  .lead{font-size:18px;color:var(--muted);max-width:34ch}
+  .hero-actions{display:flex;gap:14px;align-items:center;margin-top:26px;flex-wrap:wrap}
+  .btn-primary{background:var(--brand);color:#fff;text-decoration:none;font-weight:600;padding:13px 22px;border-radius:14px;box-shadow:var(--shadow)}
+  .meta{font-size:14px;color:var(--muted)}
+  .qr-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);text-align:center}
+  .qr-box{width:190px;height:190px;margin:6px auto 14px;border:2px dashed var(--brand-soft);border-radius:16px;display:flex;align-items:center;justify-content:center;background:#fbfdfc}
+  .qr-box img{width:100%;height:100%;object-fit:contain;border-radius:12px}
+  .qr-hint{font-size:14px;color:var(--muted)}
+  .version{display:inline-block;margin-top:10px;font-size:13px;color:var(--brand);background:var(--brand-soft);padding:4px 10px;border-radius:999px;font-weight:600}
+  section{padding:56px 0}
+  h2{font-size:clamp(22px,3.4vw,30px);letter-spacing:-.3px;margin-bottom:8px}
+  .sub{color:var(--muted);margin-bottom:32px;max-width:60ch}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+  .card .ic{width:40px;height:40px;border-radius:12px;background:var(--brand-soft);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .card .ic svg{width:22px;height:22px;stroke:var(--brand);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:17px;margin-bottom:6px}
+  .card p{font-size:15px;color:var(--muted)}
+  .privacy{background:linear-gradient(135deg,#0f766e,#115e59);color:#eafffb;border-radius:var(--radius);padding:34px}
+  .privacy h2{color:#fff}
+  .privacy ul{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px 28px;margin-top:18px}
+  .privacy li{display:flex;gap:10px;font-size:15px;align-items:flex-start}
+  .privacy li b{color:#fff}
+  .privacy .chk{color:#5eead4;font-weight:800;line-height:1.5}
+  footer{padding:40px 0 60px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:20px}
+  footer a{color:var(--brand);text-decoration:none}
+  @media(max-width:820px){.hero{grid-template-columns:1fr;gap:32px}.grid{grid-template-columns:1fr}.privacy ul{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-in">
+  <div class="logo"><span class="dot"></span> 夜间补光灯</div>
+  <a class="nav-cta" href="#download">下载</a>
+</div></header>
+
+<div class="wrap">
+  <section class="hero">
+    <div>
+      <span class="eyebrow">● 0 权限 · 全屏常亮</span>
+      <h1>手边没灯时，<br>第二台手机就是补光灯</h1>
+      <p class="lead">全屏常亮，颜色和强度随手调，两台手机不用配对、也不能远程控制。上架包 0 权限，状态本地持久化，中英双语。</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#download">获取安卓版</a>
+        <span class="meta">Android · 无需登录 · 0 权限</span>
+      </div>
+    </div>
+    <div class="qr-card" id="download">
+      <div class="qr-box"><img src="./img/download-qr.png" alt="下载二维码"></div>
+      <div class="qr-hint">手机相机对准二维码即可下载安装 · <a href="https://github.com/wanghoufan/p026-yejian-buguangdeng/releases/tag/v2.1.0" style="color:var(--brand)">GitHub Release v2.1.0</a></div>
+      <span class="version">当前版本 2.1.0 · 多语言 + 三机实测</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>它能做什么</h2>
+    <p class="sub">把闲置手机架起来当灯，颜色强度随手调。</p>
+    <div class="grid">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6"/></svg></div><h3>全屏补光画布</h3><p>默认暖白常亮，整块屏幕都是光源，架在旁边就能用。</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg></div><h3>8 组预设 + 色轮</h3><p>预设色一键切，HSV 色轮自定义，想要什么颜色自己调。</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h16"/><circle cx="9" cy="12" r="3"/><circle cx="16" cy="12" r="3"/></svg></div><h3>双滑条调节</h3><p>颜色强度与屏幕亮度分开调，暗光环境不刺眼。</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>5 秒自动收起</h3><p>操作面板 5 秒自动收起避免误触，点一下再出来。</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 014 4v1a4 4 0 01-8 0V7a4 4 0 014-4z"/><path d="M5 20a7 7 0 0114 0"/></svg></div><h3>不用配对</h3><p>两台手机各自独立，不能互相远程控制，边界写死。</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg></div><h3>中英双语 · 本地持久化</h3><p>状态存本机，中英双语，仅本机生效。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="privacy">
+      <h2>隐私，是它的设计前提</h2>
+      <ul>
+        <li><span class="chk">✓</span> <b>上架包 0 权限</b>，网络权限只留在 debug 构建</li>
+        <li><span class="chk">✓</span> <b>状态本地持久化</b>，无账号无云同步</li>
+        <li><span class="chk">✓</span> <b>不能远程控制另一台手机</b>，边界写死</li>
+        <li><span class="chk">✓</span> <b>无埋点上报</b></li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<footer><div class="wrap">夜间补光灯 · 全屏常亮 · 0 权限 · <a href="https://github.com/wanghoufan/p026-yejian-buguangdeng">GitHub</a></div></footer>
+</body>
+</html>
